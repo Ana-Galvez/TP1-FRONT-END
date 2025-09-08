@@ -1,76 +1,94 @@
+/* Importamos tipografías desde Google Fonts: 
+   - Inter (para texto normal) 
+   - Press Start 2P (para títulos estilo retro) */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Press+Start+2P&display=swap');
 
 /* ===== Paleta Retro Colorida ===== */
+/* Usamos variables CSS (empiezan con --) que guardan colores
+   y nos permiten reutilizarlos en cualquier parte del archivo */
 :root{
-  --bg:#f7f7fb;
-  --text:#0f172a;
-  --muted:#475569;
-  --pixel:#161616;
+  --bg:#f7f7fb;      /* color de fondo principal */
+  --text:#0f172a;    /* color del texto */
+  --muted:#475569;   /* texto secundario o menos importante */
+  --pixel:#161616;   /* color de bordes oscuros (estilo pixel) */
 
+  /* Colores llamativos para acentos retro */
   --c1:#00ff9f; /* verde neón */
   --c2:#8a2be2; /* violeta arcade */
   --c3:#ff9800; /* naranja retro */
   --c4:#2196f3; /* azul pixel */
-  --card:#ffffff;
+  --card:#ffffff; /* fondo blanco de las tarjetas */
 }
 
-/* ===== Base ===== */
-*{ box-sizing:border-box; }
-html,body{ margin:0; padding:0; }
+/* ===== Reset y estilos base ===== */
+*{ box-sizing:border-box; } /* asegura que el padding no rompa tamaños */
+html,body{ margin:0; padding:0; } /* quitamos márgenes por defecto */
+
 body{
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial;
-  color: var(--text);
-  background:
-    repeating-linear-gradient( to bottom, rgba(0,0,0,.03) 0, rgba(0,0,0,.03) 2px, transparent 2px, transparent 4px),
-    radial-gradient(1000px 500px at 10% -10%, rgba(0,255,159,.20), transparent 60%),
-    radial-gradient(1000px 500px at 90% -10%, rgba(138,43,226,.18), transparent 60%),
-    var(--bg);
-  line-height:1.65;
+  font-family: Inter, sans-serif;  /* tipografía principal */
+  color: var(--text);              /* color del texto */
+  background:                      /* fondo con efectos retro */
+    repeating-linear-gradient( to bottom, rgba(0,0,0,.03) 0, rgba(0,0,0,.03) 2px, transparent 2px, transparent 4px), /* líneas horizontales (scanlines) */
+    radial-gradient(1000px 500px at 10% -10%, rgba(0,255,159,.20), transparent 60%), /* halo verde */
+    radial-gradient(1000px 500px at 90% -10%, rgba(138,43,226,.18), transparent 60%), /* halo violeta */
+    var(--bg); /* fondo base */
+  line-height:1.65; /* espacio entre líneas de texto */
 }
-h1,h2,h3{ font-family:"Press Start 2P", monospace; letter-spacing:.5px; }
+
+/* Estilos para títulos */
+h1,h2,h3{ 
+  font-family:"Press Start 2P", monospace; /* tipografía retro */
+  letter-spacing:.5px; /* espacio entre letras */
+}
 h1{ font-size:1.35rem; line-height:1.25; }
 h2{ font-size:1.05rem; }
 h3{ font-size:.95rem; }
 
+/* Contenedor principal centrado */
 .container{ width:min(1100px,92%); margin:24px auto 64px; }
-.mt-2{ margin-top:12px; } .mt-3{ margin-top:18px; } .mt-4{ margin-top:24px; }
 
-/* ===== Navbar ===== */
+/* Clases utilitarias para márgenes */
+.mt-2{ margin-top:12px; } 
+.mt-3{ margin-top:18px; } 
+.mt-4{ margin-top:24px; }
+
+/* ===== Barra de navegación ===== */
 .navbar{
-  display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between;
-  padding:14px; background:var(--card);
-  border:4px solid var(--pixel); border-radius:0;
-  box-shadow:6px 6px 0 0 var(--pixel);
+  display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;
+  gap:12px;
+  padding:14px;
+  background:var(--card); /* fondo blanco */
+  border:4px solid var(--pixel); /* borde estilo pixel */
+  box-shadow:6px 6px 0 0 var(--pixel); /* sombra dura retro */
 }
 .navbar a, .btn{
-  display:inline-block; text-decoration:none; color:var(--text);
-  padding:10px 14px; border:3px solid var(--pixel); border-radius:0;
-  background:#fff; font-weight:600;
+  text-decoration:none; color:var(--text); background:#fff;
+  padding:10px 14px; border:3px solid var(--pixel);
+  font-weight:600;
   box-shadow:4px 4px 0 0 var(--pixel);
-  transition:transform .12s ease, box-shadow .12s ease, filter .12s ease;
+  transition:transform .12s, box-shadow .12s, filter .12s; /* efecto hover suave */
 }
 .navbar a:hover, .btn:hover{
-  transform: translate(-2px,-2px);
+  transform: translate(-2px,-2px); /* se mueve un poco hacia arriba/izq */
   box-shadow:6px 6px 0 0 var(--pixel);
-  filter: drop-shadow(0 0 6px rgba(0,255,159,.4));
+  filter: drop-shadow(0 0 6px rgba(0,255,159,.4)); /* brillo verde */
 }
 .brand{
   font-weight:800;
-  background: linear-gradient(90deg, var(--c1), var(--c4), var(--c2), var(--c3));
-  -webkit-background-clip:text; background-clip:text; color:transparent;
+  background: linear-gradient(90deg, var(--c1), var(--c4), var(--c2), var(--c3)); /* degradado multicolor */
+  -webkit-background-clip:text; background-clip:text; color:transparent; /* hace que el degradado pinte el texto */
 }
 
-/* ===== Hero ===== */
+/* ===== Sección Hero ===== */
 .hero{
   margin-top:28px; padding:28px; background:var(--card);
-  border:4px solid var(--pixel); border-radius:0;
-  box-shadow:8px 8px 0 0 var(--pixel);
+  border:4px solid var(--pixel); box-shadow:8px 8px 0 0 var(--pixel);
 }
-.hero .badges{
-  display:flex; flex-wrap:wrap; gap:8px; margin-top:12px;
-}
+.hero .badges{ display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+
+/* Etiquetas de tecnologías */
 .badge{
-  display:inline-block; padding:6px 10px; font-size:12px; color:#0f172a; background:#fff;
+  padding:6px 10px; font-size:12px; background:#fff;
   border:3px solid var(--pixel); box-shadow:4px 4px 0 0 var(--pixel);
 }
 .badge.c1{ border-color: var(--c1); }
@@ -78,38 +96,42 @@ h3{ font-size:.95rem; }
 .badge.c3{ border-color: var(--c3); }
 .badge.c4{ border-color: var(--c4); }
 
-/* Listas y definiciones del hero */
+/* Estilo para listas dentro del hero */
 .hero ul{ padding-left: 20px; }
 .hero ul li{ margin:6px 0; }
-.hero ul li::marker{ color: var(--c3); }
-.hero dl{ border-left: 4px solid var(--c4); padding-left: 12px; }
+.hero ul li::marker{ color: var(--c3); } /* viñetas en naranja */
+.hero dl{ border-left: 4px solid var(--c4); padding-left: 12px; } /* bloque definiciones con línea azul */
 .hero dt{ font-weight:700; margin-top:8px; }
 .hero dd{ margin:0 0 6px 0; color:var(--muted); }
 
-/* ===== Grid Cards ===== */
+/* ===== Tarjetas ===== */
 .grid{ display:grid; gap:16px; grid-template-columns: repeat(1, 1fr); }
 .card{
   padding:18px; background:var(--card);
-  border:4px solid var(--pixel); border-radius:0; box-shadow:6px 6px 0 0 var(--pixel);
+  border:4px solid var(--pixel); box-shadow:6px 6px 0 0 var(--pixel);
 }
 .card.c1{ border-color: var(--c1); }
 .card.c2{ border-color: var(--c2); }
 .card.c3{ border-color: var(--c3); }
 
-/* ===== Team ===== */
-.team{ display:grid; gap:16px; grid-template-columns: repeat(1, minmax(0,1fr)); }
+/* ===== Integrantes ===== */
+.team{ display:grid; gap:16px; grid-template-columns: repeat(1, 1fr); }
 .member{
-  display:flex; gap:14px; align-items:center; background:#fff; text-decoration:none;
-  color:var(--text);
-  border:4px solid var(--pixel); padding:12px 14px; box-shadow:6px 6px 0 0 var(--pixel);
-  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+  display:flex; gap:14px; align-items:center;
+  background:#fff; color:var(--text);
+  border:4px solid var(--pixel); padding:12px 14px;
+  box-shadow:6px 6px 0 0 var(--pixel);
+  text-decoration:none;
+  transition: transform .12s, box-shadow .12s, border-color .12s;
 }
 .member:hover{
   transform: translate(-2px,-2px);
   box-shadow:8px 8px 0 0 var(--pixel);
-  border-color: var(--c4);
+  border-color: var(--c4); /* resalta en azul */
 }
 .member img{ width:72px; height:72px; object-fit:cover; border:3px solid var(--pixel); }
+
+/* etiquetas extra */
 .tag{
   display:inline-block; margin-top:6px; padding:6px 10px; font-size:12px;
   background:#fff; border:3px solid var(--pixel); box-shadow:4px 4px 0 0 var(--pixel);
@@ -118,27 +140,30 @@ h3{ font-size:.95rem; }
 /* ===== Footer ===== */
 .footer{ margin-top:40px; color:var(--muted); font-size:14px; text-align:center; }
 
-/* ===== Inputs ===== */
+/* ===== Inputs (buscador, bitácora) ===== */
 input[type="search"], input[type="text"]{
   width:100%; max-width:380px;
-  padding:10px 12px; border:3px solid var(--pixel); border-radius:0; background:#fff; color:var(--text);
+  padding:10px 12px; border:3px solid var(--pixel); background:#fff; color:var(--text);
   box-shadow:4px 4px 0 0 var(--pixel);
 }
 
-/* ===== Breakpoints ===== */
+/* ===== Breakpoints (Responsive Design) ===== */
+/* Para pantallas >= 400px */
 @media (min-width:400px){
   .grid{ grid-template-columns: repeat(2, 1fr); }
   .team{ grid-template-columns: repeat(2, 1fr); }
 }
+/* Para pantallas >= 900px */
 @media (min-width:900px){
   .grid{ grid-template-columns: repeat(3, 1fr); }
   .team{ grid-template-columns: repeat(3, 1fr); }
 }
+/* Para pantallas >= 1200px */
 @media (min-width:1200px){
   .container{ width:min(1150px,88%); }
   .team{ grid-template-columns: repeat(5, 1fr); }
 }
 
 /* ===== Utils ===== */
-.hidden{ display:none!important; }
-.center{ text-align:center; }
+.hidden{ display:none!important; } /* oculta elementos */
+.center{ text-align:center; }      /* centra texto */
