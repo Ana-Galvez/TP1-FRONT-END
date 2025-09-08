@@ -1,11 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portada</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portada – Equipo Retro Front End</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/main.js"></script>
 </head>
 <body>
-    
+  <div class="container">
+    <!-- NAV con botones -->
+    <nav class="navbar">
+      <span class="brand">Front End</span>
+      <div>
+        <a href="index.html">Inicio</a>
+        <a href="bitacora.html">Bitácora</a>
+        <a href="#" onclick="scrollTopSmooth()">Arriba ↑</a>
+        <a class="btn" href="#" onclick="toggleTheme()">Cambiar tema</a>
+      </div>
+    </nav>
+
+    <!-- HERO con listas semánticas -->
+    <header class="hero">
+      <h1>Proyecto Web - Grupo 12 🎮</h1>
+
+      <h2 class="mt-3">Características principales</h2>
+      <ul>
+        <li>Navegación clara con botones (Inicio / Bitácora / Arriba / Cambiar tema).</li>
+        <li>Diseño responsive con breakpoints en <strong>400px</strong>, <strong>900px</strong> y <strong>1200px</strong>.</li>
+        <li>Portada en <code>index.html</code> y páginas individuales por integrante.</li>
+        <li>Sección <strong>Bitácora</strong> con decisiones, dificultades y cambios.</li>
+        <li>Tipografías de Google Fonts y estilos consistentes.</li>
+        <li>Interacción con JavaScript en portada y en cada tarjeta.</li>
+      </ul>
+
+      <!--<h2 class="mt-3">Stack (definiciones)</h2>
+      <dl>
+        <dt>HTML</dt><dd>Estructura semántica y elementos accesibles.</dd>
+        <dt>CSS</dt><dd>Estilos retro, variables y media queries.</dd>
+        <dt>JavaScript</dt><dd>Interacciones (filtro, tema, toggles).</dd>
+        <dt>Google Fonts</dt><dd>Press Start 2P para títulos; Inter para texto.</dd>
+      </dl>
+    -->
+
+      <!-- Interacción JS: filtro de integrantes -->
+      <div class="mt-3">
+        <input id="filter-input" type="search" placeholder="Filtrar integrantes…" oninput="filterTeam()">
+      </div>
+    </header>
+
+    <!-- LISTA DE INTEGRANTES (5) -->
+    <section class="mt-4">
+      <h2>Integrantes</h2>
+      <div class="team mt-2">
+        <a class="member" href="tarjetasIndividuales/alvaro.html" data-name="Alavaro">
+          <img src="img/user1.jpg" alt="Integrante 1" />
+          <div><strong>Alvaro</strong></div>
+        </a>
+        <a class="member" href="tarjetasIndividuales/ana.html" data-name="Ana">
+          <img src="img/user2.jpg" alt="Integrante 2" />
+          <div><strong>Ana</strong></div>
+        </a>
+        <a class="member" href="tarjetasIndividuales/jessica.html" data-name="Jessica">
+          <img src="img/user3.jpg" alt="Integrante 3" />
+          <div><strong>Jessica</strong></div>
+        </a>
+        <a class="member" href="tarjetasIndividuales/tomas.html" data-name="Tomas">
+          <img src="img/user4.jpg" alt="Integrante 4" />
+          <div><strong>Tomas</strong></div>
+        </a>
+        <a class="member" href="tarjetasIndividuales/virginia.html" data-name="Virginia">
+          <img src="img/user5.jpg" alt="Integrante 5" />
+          <div><strong>Virginia</strong></div>
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+   <footer class="footer">
+  <p>© 2025 Equipo Retro Front End — <a href="bitacora.html">Bitácora</a></p>
+  <p>Insert Coin 💾</p>
+</footer>
+
+  </div>
 </body>
 </html>
