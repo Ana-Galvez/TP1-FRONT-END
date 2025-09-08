@@ -40,7 +40,10 @@ h1,h2,h3{
   font-family:"Press Start 2P", monospace; /* tipografía retro */
   letter-spacing:.5px; /* espacio entre letras */
 }
-h1{ font-size:1.35rem; line-height:1.25; }
+h1{ 
+  font-size:1.35rem; 
+  line-height:1.25; 
+}
 h2{ font-size:1.05rem; }
 h3{ font-size:.95rem; }
 
@@ -75,8 +78,11 @@ h3{ font-size:.95rem; }
 }
 .brand{
   font-weight:800;
-  background: linear-gradient(90deg, var(--c1), var(--c4), var(--c2), var(--c3)); /* degradado multicolor */
-  -webkit-background-clip:text; background-clip:text; color:transparent; /* hace que el degradado pinte el texto */
+  font-size:1.6rem; 
+  background: linear-gradient(90deg, var(--c1), var(--c4), var(--c2), var(--c3));
+  -webkit-background-clip:text; 
+  background-clip:text; 
+  color:transparent;
 }
 
 /* ===== Sección Hero ===== */

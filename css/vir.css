@@ -1,1 +1,10 @@
-/* member-1.css libre */
+/* Avatar cuadrado alineado a la derecha */
+.avatar-right {
+  width: 140px;
+  height: 140px;
+  border: 4px solid var(--pixel);
+  box-shadow: 6px 6px 0 0 var(--c3); /* sombra retro naranja */
+  border-radius: 8px; /* esquinas cuadradas con leve redondeo */
+  float: right; /* se va a la derecha del header */
+  margin: -40px 0 10px 20px; /* sube un poco y se separa del texto */
+}
