@@ -7,7 +7,8 @@ En este trabajo se trata de plasmar las habilidades de cada integrante del equip
 - HTML
 - CSS
 - Javascript
-- FALTA AGREGAR MÁS COSAS COMO GOOGLE FONTS O SI USAN ÍCONOS
+- GOOGLE FONTS
+- ETC
 
 ## Estructura de archivos
 - index.html en raíz
