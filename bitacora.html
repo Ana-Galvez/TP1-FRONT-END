@@ -1,11 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitácora</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bitácora</title>
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/main.js"></script>
 </head>
 <body>
-    
+<div class="container">
+<nav class="navbar"><a class="brand" href="index.html">← Portada</a></nav>
+<header class="hero"><h1>Bitácora</h1></header>
+<section class="mt-4">
+  <ul id="bitacora-list">
+    <li>Definimos estética de la página general.</li>
+  </ul>
+  <input id="bitacora-input" type="text">
+  <button class="btn" onclick="addBitacoraEntry()">Agregar</button>
+</section>
+</div>
 </body>
 </html>
