@@ -13,7 +13,7 @@ function toggleTheme() {
   const botonModo = document.querySelector("#btn-modo")
 
   if (document.body.style.background === "black" && header.style.background === "black") {
-    // 🌞 Vuelve a modo claro
+    //Vuelve a modo claro
     document.body.style.background = "#f7f7fb";
     header.style.background = "#ffffff";
     document.body.style.color = "#0f172a";
@@ -25,7 +25,7 @@ function toggleTheme() {
     });
 
   } else {
-    // 🌙 Activa modo oscuro
+    //Activa modo oscuro
     document.body.style.background = "black";
     header.style.background = "black";
     document.body.style.color = "white";
