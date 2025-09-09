@@ -1,11 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jessica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/jessica.css">
+  <script defer src="../js/main.js"></script>
+  <script defer src="../js/jes.js"></script>
 </head>
 <body>
-    
+  <div class="container">
+    <nav class="navbar">
+      <a class="brand" href="../index.html">← Volver</a>
+    </nav>
+
+    <header class="hero">
+      <img src="../img/jes.png" alt="Avatar Jessica" class="avatar">
+      <h1>Jessica Oleszuk</h1>
+      <p class="info"> Tucumán | Edad: 38 </p>
+    </header>
+
+    <section class="content">
+      <h2>Sobre mí</h2>
+      <p>Soy estudiante de la Tecnicatura en desarrollo de Software, con interés en diseño frontend y experiencia de usuario. Me encanta aprender nuevas tecnologías y trabajar en equipo, aprendo mucho de mis compañeros tambíen.</p>
+
+      <h2>Habilidades</h2>
+      <ul id="skills-list">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>Trabajo en equipo</li>
+      </ul>
+      <button class="btn" onclick="toggleSkills()">Mostrar/Ocultar</button>
+
+      <h2>Películas favoritas</h2>
+      <ul id="Movies-list">
+        <li>En busca de la felicidad</li>
+        <li>La vida es bella</li>
+        <li>Cadena de favores</li>
+      </ul>
+      <button class="btn" onclick="toggleMovies()">Mostrar/Ocultar</button>
+
+      <h2>Música favorita</h2>
+      <ul id="Music-list">
+        <li>Maria Becerra</li>
+        <li>Tan Bionica</li>
+        <li>Miranda</li>
+      </ul>
+     <button class="btn" onclick="toggleMusic()">Mostrar/Ocultar</button>
+    </section>
+  </div>
 </body>
 </html>
+
