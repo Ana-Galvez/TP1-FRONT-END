@@ -23,6 +23,7 @@ En este trabajo se trata de plasmar las habilidades de cada integrante del equip
 - index.html: hay un alert en el footer
 - bitacora.html: addBitacoraEntry()  agrega a la lista, pero no se guarda
 - tarjetas individuales: toggleSkills() muestra u oculta datos
+- ana.html: al ingresar a la página, el nombre y la ubicación van apareciendo letra por letra
 
 ## Enlace del sitio
 Al terminar acá pondremos el link, creo que ya en GitHub Pages de nuestro sitio.

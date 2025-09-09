@@ -1,11 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ana</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ana</title>
+<link rel="stylesheet" href="../css/style.css">
+<script defer src="../js/main.js"></script>
+<script defer src="../js/ana.js"></script>
 </head>
 <body>
-    
+<div class="container">
+<nav class="navbar"><a class="brand" href="../index.html">← Portada</a>
+<a class="brand" id="btn-modo" href="#" onclick="toggleTheme()">Modo oscuro</a>
+</nav>
+<header class="hero">
+  <h1>Ana</h1>
+  <p>Ubicación: La Matanza | Edad: 43</p>
+  <!-- cambiar ruta de img cuando esté la carpeta img -->
+  <img src="../avatarAna.PNG" alt="Imagen de ana" style="width: 15%; border-radius: 15%;"> 
+</header>
+<section class="mt-4">
+  <h2>Habilidades</h2>
+  <ul id="skills-list">
+    <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Colaborativa</li><li>Proactiva</li>
+  </ul>
+  <button class="btn" onclick="toggleSkills()">Mostrar/Ocultar</button>
+  <h2>Películas favoritas</h2>
+  <ul id="movies-list"><li>Titanic</li><li>Pasajeros</li><li>Diario de una pasión</li></ul>
+  <button class="btn" onclick="toggleMovies()">Mostrar/Ocultar</button>
+  <h2>Música / Discos favoritos</h2>
+  <ul id="music-list"><li>Celine Dion</li><li>Ha*Ash</li><li>Chayanne</li></ul>
+  <button class="btn" onclick="toggleMusic()">Mostrar/Ocultar</button>
+</section>
+</div>
 </body>
 </html>
