@@ -7,7 +7,7 @@ En este trabajo se trata de plasmar las habilidades de cada integrante del equip
 - HTML
 - CSS
 - Javascript
-- GOOGLE FONTS, ETC
+- GOOGLE FONTS
 
 ## Estructura de archivos
 - index.html en raíz
@@ -18,7 +18,11 @@ En este trabajo se trata de plasmar las habilidades de cada integrante del equip
 - README.md en raíz
 
 ## Funciones utilizadas con Javascript
-- ACÁ DEBEMOS PONER LAS FUNCIONES QUE USEN TANTO EN CADA PÁGINA DE USTEDES Y LAS QUE PONGAMOS EN INDEX.HTML Y BITÁCORA
+- index.html: toggleTheme() modo oscuro
+- index.html: filterTeam() filtrar por integrante
+- index.html: hay un alert en el footer
+- bitacora.html: addBitacoraEntry()  agrega a la lista, pero no se guarda
+- tarjetas individuales: toggleSkills() muestra u oculta datos
 
 ## Enlace del sitio
 Al terminar acá pondremos el link, creo que ya en GitHub Pages de nuestro sitio.
