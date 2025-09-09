@@ -21,6 +21,7 @@ En este trabajo se trata de plasmar las habilidades de cada integrante del equip
 - index.html: toggleTheme() modo oscuro
 - index.html: filterTeam() filtrar por integrante
 - index.html: hay un alert en el footer
+- index.html: toggleMenu() para menú hamburguesa en dispositivos < 400px
 - bitacora.html: addBitacoraEntry()  agrega a la lista, pero no se guarda
 - tarjetas individuales: toggleSkills() muestra u oculta datos
 - ana.html: al ingresar a la página, el nombre y la ubicación van apareciendo letra por letra
