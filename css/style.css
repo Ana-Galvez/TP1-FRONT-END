@@ -29,7 +29,7 @@ body{
   color: var(--text);              /* color del texto */
   background:                      /* fondo con efectos retro */
     repeating-linear-gradient( to bottom, rgba(0,0,0,.03) 0, rgba(0,0,0,.03) 2px, transparent 2px, transparent 4px), /* líneas horizontales (scanlines) */
-    radial-gradient(1000px 500px at 10% -10%, rgba(0,255,159,.20), transparent 60%), /* halo verde */
+    radial-gradient(1000px 500px at 10% -10%, rgba(95, 252, 186, 0.2), transparent 60%), /* halo verde */
     radial-gradient(1000px 500px at 90% -10%, rgba(138,43,226,.18), transparent 60%), /* halo violeta */
     var(--bg); /* fondo base */
   line-height:1.65; /* espacio entre líneas de texto */

@@ -11,10 +11,6 @@ function filterTeam(){
   });
 }
 
-function scrollTopSmooth(){
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-
 function toggleSkills(){
   document.getElementById('skills-list').classList.toggle('hidden');
 }
