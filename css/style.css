@@ -153,7 +153,47 @@ input[type="search"], input[type="text"]{
   box-shadow:4px 4px 0 0 var(--pixel);
 }
 
+/* ===== Menú hamburguesa ===== */
+.menu-toggle {
+  display: none; /* Ocultar el botón en pantallas grandes */
+  font-size: 30px;
+  color: rgb(14, 13, 13);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 /* ===== Breakpoints (Responsive Design) ===== */
+
+/* Para pantallas < 400px */
+@media (max-width: 399px) {
+  .nav-links {
+    display: none; /* Ocultar enlaces de navegación por defecto */
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: #333;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .nav-links a {
+    color: rgb(14, 13, 13);
+    text-decoration: none;
+  }
+
+  .menu-toggle {
+    display: block; /* Mostrar el botón hamburguesa */
+  }
+
+  .nav-links.active {
+    display: flex; /* Mostrar los enlaces cuando el menú está activo */
+  }
+}
+
 /* Para pantallas >= 400px */
 @media (min-width:400px){
   .grid{ grid-template-columns: repeat(2, 1fr); }
