@@ -14,10 +14,17 @@ function toggleMenu() {
 // Función para filtrar integrantes
 function filterTeam(){
   const q=document.getElementById('filter-input').value.toLowerCase();
+  if(q=== ""){  //Si el input está vacio muestra todos los integrantes
+      document.querySelectorAll('.member').forEach(m=>{
+    const n=m.dataset.name.toLowerCase();
+    m.style.display="flex";
+  });
+  } else{ // Si el input tiene algo escrito, desde el primer caracter verifica si coincide con la primera letra de los integrantes, si coincide sigue verificando el segundo caracter y siguientes.
   document.querySelectorAll('.member').forEach(m=>{
     const n=m.dataset.name.toLowerCase();
-    m.style.display=n.includes(q)?'flex':'none';
+    m.style.display=n.startsWith(q) ?'flex':'none';
   });
+  }
 }
 
 // Función para ocultar/mostrar habilidades
@@ -38,5 +45,5 @@ function addBitacoraEntry(){
 
 //Función para mostrar el alert del footer
 document.querySelector("footer").addEventListener("click", () => {
-  alert("🎮 ¡Modo secreto activado! Gracias por visitar nuestra web.");
+  alert("🎮 ¡Modo secreto activado! Gracias por visitar nuestra web. 😁");
 });
