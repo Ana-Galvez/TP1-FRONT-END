@@ -25,6 +25,7 @@ En este trabajo se trata de plasmar las habilidades de cada integrante del equip
 - bitacora.html: addBitacoraEntry()  agrega a la lista, pero no se guarda
 - tarjetas individuales: toggleSkills() muestra u oculta datos
 - ana.html: al ingresar a la página, el nombre y la ubicación van apareciendo letra por letra
-- jessica.html: despues de la presentacion, al hacer click en un boton te muestra frases motivacionales que van cambiando.
+- jessica.html: después de la presentación, al hacer click en un botón te muestra frases motivacionales que van cambiando.
+
 ## Enlace del sitio
-Al terminar acá pondremos el link, creo que ya en GitHub Pages de nuestro sitio.
+PONER LINK SITIO
