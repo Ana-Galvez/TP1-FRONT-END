@@ -1,10 +1,179 @@
-/* Avatar cuadrado alineado a la derecha */
+/* ------ Layout del hero propio ------ */
+.hero-vir .hero-wrap{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:16px;
+}
+.hero-vir .hero-text{
+  flex:1 1 auto;
+}
+
+/* Lista de datos rápidos */
+.facts{
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+.facts li{ margin: 4px 0; }
+
+/* Avatar cuadrado a la derecha (mantiene tu estilo original) */
 .avatar-right {
   width: 140px;
   height: 140px;
   border: 4px solid var(--pixel);
-  box-shadow: 6px 6px 0 0 var(--c3); /* sombra retro naranja */
-  border-radius: 8px; /* esquinas cuadradas con leve redondeo */
-  float: right; /* se va a la derecha del header */
-  margin: -40px 0 10px 20px; /* sube un poco y se separa del texto */
+  box-shadow: 6px 6px 0 0 var(--c3);
+  border-radius: 8px;
+  margin: -8px 0 0 16px; /* leve ajuste para alinear con el título */
+  flex: 0 0 auto;        /* que no se deforme en flex */
 }
+
+/* Grid propio de esta página (3 tarjetas) */
+.grid-vir{
+  display:grid;
+  gap:16px;
+  grid-template-columns: 1fr;
+}
+
+/* Listas con emoji */
+.list-emoji{ padding-left: 20px; list-style: none; }
+.list-emoji li{ margin:6px 0; }
+
+/* Hover para la música -> uso pseudo-clases */
+#musica-list:hover::after {
+  content: "🎶 De chica escuchaba estas canciones, no me juzgues 😅";
+  display: block;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* Hover para las pelis -> uso pseudo-clases */
+#peli-list:hover::after {
+  content: "🍿 Por mi hija, ahora miro más Disney de lo que quisiera 😂";
+  display: block;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.skills li{
+  margin: 6px 0;  
+}
+
+/* ------ Responsive solo para esta página ------ */
+@media (min-width: 700px){
+  .grid-vir{ grid-template-columns: repeat(3, 1fr); }
+}
+
+/* En móviles, avatar centrado y sin float */
+@media (max-width: 520px){
+  .hero-vir .hero-wrap{ flex-direction: column; }
+  .avatar-right{
+    margin: 12px auto 0;
+    width: 120px; height: 120px;
+  }
+}
+
+/* ====================== PAC-MODE ====================== */
+/* Activa el tema poniendo la clase en <html>:  .vir-pacman */
+:root.vir-pacman{
+  /* paleta inspirada en Pac-Man */
+  --bg: #0b0f19;       /* casi negro azulado */
+  --card: #0f1324;     /* panel oscuro */
+  --text: #e6f1ff;     /* texto claro */
+  --muted:#9bb0c6;     /* texto secundario */
+  --pixel:#000;        /* borde “pixel” */
+  --c1:#ffd500;        /* amarillo Pac-Man (pellets) */
+  --c2:#00e5ff;        /* celeste (fantasma Inky) */
+  --c3:#ff4d6d;        /* rosado (fantasma Pinky) */
+  --c4:#7fff00;        /* verde neón para acentos */
+}
+
+/* Fondo */
+:root.vir-pacman body{
+   background: url("../img/pacman-maze.png") center top / cover no-repeat #19027e;
+   color: var(--text);
+}
+
+/* Navbar en modo Pac-Man: brillo y contraste retro */
+:root.vir-pacman .navbar{
+  background: var(--card);
+  border-color: var(--c1);
+  box-shadow: 6px 6px 0 0 var(--pixel), 0 0 10px rgba(255,213,0,.25) inset;
+}
+:root.vir-pacman .navbar a,
+:root.vir-pacman .btn,
+:root.vir-pacman .menu-toggle{
+  background: #0b1022;
+  color: var(--text);
+  border-color: var(--c1);
+  box-shadow: 4px 4px 0 0 var(--pixel);
+}
+:root.vir-pacman .navbar a:hover,
+:root.vir-pacman .btn:hover,
+:root.vir-pacman .menu-toggle:hover{
+  filter: drop-shadow(0 0 6px var(--c1));
+  transform: translate(-2px,-2px);
+}
+:root.vir-pacman .badge{
+  background: #0b1022;
+}
+
+/* “Logo” con glow amarillo */
+:root.vir-pacman .brand{
+  /*font-size: 1.9rem;*/
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, var(--c1), #fff2a8);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+  text-shadow: 0 0 8px rgba(255,213,0,.5);
+}
+:root.vir-pacman .brand::after{
+  content: " ᗧ"; /* semicirculito Pac-Man */
+  color: var(--c1);
+}
+
+/* Hero/cajas más oscuras con borde “arcade” */
+:root.vir-pacman .hero,
+:root.vir-pacman .card,
+:root.vir-pacman .member{
+  background: var(--card);
+  border-color: var(--c1);
+  box-shadow: 6px 6px 0 0 var(--c1);
+}
+
+/* Links activos del menú desplegable en mobile */
+@media (max-width: 600px){
+  :root.vir-pacman .nav-links{
+    background: #0b1022;
+    border-color: var(--c1);
+  }
+  :root.vir-pacman .nav-links a{
+    border-color: var(--c1);
+  }
+}
+
+/* Avatar: borde Pac-Man y leve glow */
+:root.vir-pacman .avatar-right{
+  box-shadow: 6px 6px 0 0 var(--pixel), 0 0 10px rgba(255,213,0,.35);
+  border-color: var(--c1);
+}
+
+/* Títulos con sombra neón */
+:root.vir-pacman h1, 
+:root.vir-pacman h2{
+  text-shadow: 2px 2px 0 var(--pixel), 0 0 8px rgba(0,229,255,.35);
+}
+
+/* Markers y dl a tono Pac-Man */
+:root.vir-pacman .hero ul li::marker{ color: var(--c1); }
+:root.vir-pacman .hero dl{ border-left: 4px solid var(--c2); }
+
+/* Botón “Pac-Mode” como píldora energizante */
+:root.vir-pacman #pac-toggle{
+  border-color: var(--c1);
+  background: linear-gradient(90deg, #241400, #3a2a00);
+  color: #ffe680;
+}
+

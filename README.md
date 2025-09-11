@@ -26,6 +26,7 @@ En este trabajo se trata de plasmar las habilidades de cada integrante del equip
 - tarjetas individuales: toggleSkills() muestra u oculta datos
 - ana.html: al ingresar a la página, el nombre y la ubicación van apareciendo letra por letra
 - jessica.html: después de la presentación, al hacer click en un botón te muestra frases motivacionales que van cambiando.
+- virginia.html: Agregue un modo "Pac-man" que cambia el fondo original por una imagen del laberinto y varios de los css de los componentes de la página. Además cambio el texto del botón que cambia el modo. 
 
 ## Enlace del sitio
 PONER LINK SITIO
