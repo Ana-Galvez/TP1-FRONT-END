@@ -34,6 +34,9 @@ section p {
 .container {
   position: relative;
   z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 /* --- Barra de navegación superior --- */
@@ -154,4 +157,44 @@ ul li {
 
 .dropdown-content li:hover {
   background: rgba(255, 255, 255, 0.95);
+}
+
+
+/* Ajustes para pantallas de hasta 768px */
+@media (max-width: 768px) {
+  .avatar-right {
+    float: none;
+    display: block;
+    margin: 20px auto;
+    width: 100px;
+    height: 100px;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .dropdown-section {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .dropdown-column {
+    margin: 0;
+    width: 100%;
+  }
+
+  .dropdown-title {
+    font-size: 1rem;
+  }
+
+  section p {
+    font-size: 0.9rem;
+  }
+
+  ul li {
+    font-size: 0.9rem;
+  }
 }
