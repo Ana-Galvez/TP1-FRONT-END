@@ -1,33 +1,97 @@
 <!doctype html>
 <html lang="es">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Virginia</title>
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/vir.css">
-<script defer src="../js/main.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Página personal de Virginia, grupo 12 de front-end">
+  <meta name="keywords" content="html,css,javascript">
+  <meta name="author" content="Virginia">
+  <meta name="copyright" content="2025">
+  <title>Virginia</title>
+  <link rel="icon" type="image/x-icon" href="../img/favicon.ico" />
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/vir.css">
+  <script defer src="../js/main.js"></script>
 </head>
+
 <body>
-<div class="container">
-<nav class="navbar"><a class="brand" href="../index.html">← Portada</a></nav>
-<header class="hero">
-  <h1>Virginia</h1>
-  <p>Ubicación: Bahía Blanca | Edad: 41</p>
-  <img src="../img/vir.png" alt="Avatar Virginia" class="avatar-right">
-</header>
-<section class="mt-4">
-  <h2>Habilidades</h2>
-  <ul id="skills-list">
-    <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Trabajo en equipo</li>
-  </ul>
-  <button class="btn" onclick="toggleSkills()">Mostrar/Ocultar</button>
-  <h2>Películas favoritas</h2>
-  <ul><li>Película 1</li><li>Película 2</li><li>Película 3</li></ul>
-  <h2>Música / Discos favoritos</h2>
-  <ul><li>Disco 1</li><li>Disco 2</li><li>Disco 3</li></ul>
-</section>
-</div>
+  <div class="container">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <span class="brand">Front End</span>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div class="nav-links">
+        <a href="../index.html">← Portada</a>
+        <a href="../bitacora.html">Bitácora</a>
+        <a href="#" id="pac-toggle">Pac-Mode</a> <!-- modo propio para mi página -->
+      </div>
+    </nav>
+
+    <!-- HERO con avatar cuadrado a la derecha -->
+    <header class="hero hero-vir">
+      <div class="hero-wrap">
+        <div class="hero-text">
+          <h1>Virginia</h1>
+          <ul class="facts">
+            <li>📍 Bahía Blanca</li>
+            <li>🎂 41 años</li>
+          </ul>
+
+          <!-- badges estilo retro -->
+          <div class="badges mt-2">
+            <span class="badge c1">HTML</span>
+            <span class="badge c2">CSS</span>
+            <span class="badge c3">JavaScript</span>
+            <span class="badge c4">Trabajo en equipo</span>
+          </div>
+        </div>
+
+        <img src="../img/vir.png" alt="Avatar de Virginia" class="avatar-right" />
+      </div>
+    </header>
+
+    <section class="mt-4 grid-vir">
+      <!-- Habilidades  -->
+      <article class="card">
+        <h2>Habilidades</h2>
+        <ul id="skills-list" class="skills">
+          <li>HTML semántico</li>
+          <li>CSS (responsive)</li>
+          <li>JavaScript</li>
+          <li>Trabajo en equipo</li>
+        </ul>
+        <!--<button class="btn mt-2" onclick="toggleSkills()">Mostrar/Ocultar</button>-->
+      </article>
+
+      <!-- Películas retro/games -->
+      <article class="card">
+        <h2>Películas </h2>
+        <ul class="list-emoji" id="peli-list">
+          <li>🎬 Back to the Future</li>
+          <li>🎬 Tron</li>
+          <li>🎬 Ready Player One</li>
+        </ul>
+      </article>
+
+      <!-- Música Retro-->
+      <article class="card">
+        <h2>Música</h2>
+        <ul class="list-emoji" id="musica-list">
+          <li>🎵 Vangelis: Chariots Of Fire</li>
+          <li>🎵 Electric Light Orchestra: Time</li>
+          <li>🎵 Pet Shop Boys: Always On My Mind</li>
+        </ul>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <p>© 2025 Grupo 12 — <a href="../bitacora.html">Bitácora</a></p>
+
+    </footer>
+  </div>
+
+  <script defer src="../js/vir.js"></script>
 </body>
+
 </html>
-<!-- avatar creado con https://8biticon.com/ -->

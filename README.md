@@ -26,5 +26,9 @@ En este trabajo se trata de plasmar las habilidades de cada integrante del equip
 - tarjetas individuales: toggleSkills() muestra u oculta datos
 - ana.html: al ingresar a la página, el nombre y la ubicación van apareciendo letra por letra
 - jessica.html: despues de la presentacion, al hacer click en un boton te muestra frases motivacionales que van cambiando y se agregó animación al avatar.
+- virginia.html: Agregue un modo "Pac-man" que cambia el fondo original por una imagen del laberinto y varios de los css de los componentes de la página. Además cambio el texto del botón que cambia el modo.
+- tomas.js: integración con Hydra (script dinámico para importar hydra-synth desde CDN, initHydra() inicializa Hydra y genera visuales dinámicos en el canvas, setCanvasSize() adapta el tamaño del canvas al viewport y window.addEventListener('resize') ajusta resolución de Hydra al cambiar tamaño de ventana). control de dropdowns al hacer click en .dropdown-column alterna clases activas
+
+>>>>>>> ff2d0e8065c9fcbdc5e0ef25c99bb5488218eaab
 ## Enlace del sitio
-Al terminar acá pondremos el link, creo que ya en GitHub Pages de nuestro sitio.
+PONER LINK SITIO
