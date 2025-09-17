@@ -1,0 +1,236 @@
+/* Fuente retro-científica */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+/* --- Variables de color accesibles --- */
+:root {
+  --bg-dark: #0b2545;   /* Azul profundo */
+  --bg-panel: rgba(255, 255, 255, 0.05);
+  --text-light: #ffffff;
+  --accent-green: #4caf50; /* Verde ADN */
+  --accent-blue: #2196f3;  /* Azul datos */
+  --accent-yellow: #ffc107; /* Amarillo resaltado */
+  --accent-cyan: #00e5ff;  /* Cian ciencia */
+}
+
+/* --- Avatar --- */
+.avatar-right {
+  width: 140px;
+  height: 140px;
+  border: 3px solid var(--accent-green);
+  box-shadow: 4px 4px 0 var(--accent-blue);
+  border-radius: 8px;
+  float: right;
+  margin: -125px 0 10px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatar-right:hover {
+  transform: scale(1.05);
+  box-shadow: 6px 6px 0 var(--accent-cyan);
+}
+
+/* --- Fondo accesible --- */
+body {
+  font-family: "Space Mono", monospace;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* --- Patrón de ADN como background decorativo --- */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/pattern-dna.svg");
+  background-size: 200px auto;
+  opacity: 0.04;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* --- Contenedor principal --- */
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* --- Navbar --- */
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  padding: 12px 0;
+}
+
+.navbar .brand {
+  color: var(--accent-green);
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.navbar .brand:hover,
+.navbar .brand:focus {
+  color: var(--accent-yellow);
+  outline: none;
+}
+
+/* --- Hero --- */
+.hero {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin: 10px 0 5px;
+  color: var(--accent-blue);
+}
+
+.hero p {
+  color: var(--text-light);
+  opacity: 0.9;
+}
+
+/* --- Párrafos en secciones --- */
+section p {
+  background: var(--bg-panel);
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 4px solid var(--accent-green);
+}
+
+/* --- Listas --- */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: var(--bg-panel);
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 6px;
+  border-left: 4px solid var(--accent-blue);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+ul li:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateX(4px);
+}
+
+/* --- Dropdowns --- */
+.dropdown-section {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.dropdown-column {
+  flex: 1;
+  min-width: 250px;
+  margin: 0 5px;
+  background: var(--bg-panel);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dropdown-column:hover,
+.dropdown-column:focus-within {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--accent-green);
+}
+
+.dropdown-title {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--accent-yellow);
+  font-weight: 700;
+  border-bottom: 2px solid var(--accent-blue);
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+/* Contenido desplegable */
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+.dropdown-column.active .dropdown-content {
+  max-height: 800px;
+  opacity: 1;
+  padding-top: 10px;
+}
+
+/* --- Footer --- */
+.footer {
+  margin-top: 40px;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  background: #0a1e36;
+  border-top: 2px solid var(--accent-blue);
+}
+
+/* --- Focus visible para accesibilidad --- */
+a:focus,
+button:focus,
+.dropdown-title:focus {
+  outline: 3px solid var(--accent-cyan);
+  outline-offset: 2px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .avatar-right {
+    float: none;
+    display: block;
+    margin: 20px auto;
+    width: 100px;
+    height: 100px;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .dropdown-section {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .dropdown-column {
+    margin: 0;
+    width: 100%;
+  }
+
+  .dropdown-title {
+    font-size: 1rem;
+  }
+
+  section p,
+  ul li {
+    font-size: 0.9rem;
+  }
+}
