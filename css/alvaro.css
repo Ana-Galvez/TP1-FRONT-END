@@ -5,9 +5,9 @@
 :root {
   --bg-dark: #0b2545;   /* Azul profundo */
   --bg-panel: rgba(255, 255, 255, 0.05);
-  --text-light: #ffffff;
+  --text-light: #2196f3;
   --accent-green: #4caf50; /* Verde ADN */
-  --accent-blue: #2196f3;  /* Azul datos */
+  --accent-blue: #063f6d;  /* Azul datos */
   --accent-yellow: #ffc107; /* Amarillo resaltado */
   --accent-cyan: #00e5ff;  /* Cian ciencia */
 }
