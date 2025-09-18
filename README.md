@@ -14,7 +14,6 @@ La idea fue trabajar en equipo, compartir estilos y experimentar con diferentes 
 - **Hydra-synth** (para visuales dinámicos en canvas)
 
 ## 📂 Estructura de archivos
-
 ├── index.html # Portada principal (en raíz)
 ├── bitacora.html # Registro de avances del grupo (en raíz)
 ├── css/ # Estilos globales y personalizados (Archivos css, tanto para index.html como para cada html)
