@@ -28,6 +28,11 @@ La idea fue trabajar en equipo, compartir estilos y experimentar con diferentes 
 │ └── ...
 └── README.md
 
+## 📂 Estructura de archivos
+├── index.html # Portada principal (en raíz)
+├── bitacora.html # Registro de avances del grupo (en raíz)
+
+
 ## Funciones utilizadas con Javascript
 - index.html: toggleTheme() modo oscuro
 - index.html: filterTeam() filtrar por integrante
