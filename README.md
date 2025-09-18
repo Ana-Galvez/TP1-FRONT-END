@@ -1,21 +1,31 @@
 # TP DE PRESENTACIÓN DEL GRUPO 12
 
 ## Descripción
-En este trabajo se trata de plasmar las habilidades de cada integrante del equipo en cuanto a HTML, CSS y Javascript, ayudándonos porque tenemos diferentes niveles de conocimientos.
+En este trabajo se trata de plasmar las habilidades de cada integrante del equipo en cuanto a HTML, CSS y Javascript, ayudándonos porque tenemos diferentes niveles de conocimientos. Se trata de una **presentación interactiva** del Grupo 12, donde cada integrante diseñó su propia tarjeta personal aplicando conocimientos de **HTML, CSS y JavaScript**.  
+La idea fue trabajar en equipo, compartir estilos y experimentar con diferentes efectos visuales y funcionalidades, respetando la estética retro y creativa que nos caracteriza.
 
-## Tecnologías utilizadas
-- HTML
-- CSS
-- Javascript
-- GOOGLE FONTS
+## 🛠️ Tecnologías utilizadas
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **Google Fonts**
+- **Hydra-synth** (para visuales dinámicos en canvas)
 
-## Estructura de archivos
-- index.html en raíz
-- bitacora.html en raíz
-- Archivos css dentro de carpeta css, tanto para index.html como para cada html
-- Archivos javascript dentro de carpeta js, tanto para index.html como para cada html
-- Imágenes dentro de carpeta img
-- README.md en raíz
+## 📂 Estructura de archivos
+
+├── index.html # Portada principal (en raíz)
+├── bitacora.html # Registro de avances del grupo (en raíz)
+├── css/ # Estilos globales y personalizados (Archivos css, tanto para index.html como para cada html)
+│ ├── style.css 
+│ ├── bitacora.css
+│ └── ...
+├── js/ # Scripts globales y personalizados (Archivos javascript para index.html como para cada html)
+│ ├── main.js
+│ └── ...
+├── img/ # Imágenes y assets (Imágenes dentro de carpeta)
+│ ├── favicon.ico
+│ └── ...
+└── README.md
 
 ## Funciones utilizadas con Javascript
 - index.html: toggleTheme() modo oscuro
@@ -27,7 +37,15 @@ En este trabajo se trata de plasmar las habilidades de cada integrante del equip
 - ana.html: al ingresar a la página, el nombre y la ubicación van apareciendo letra por letra
 - jessica.html: despues de la presentacion, al hacer click en un boton te muestra frases motivacionales que van cambiando y se agregó animación al avatar.
 - virginia.html: Agregue un modo "Pac-man" que cambia el fondo original por una imagen del laberinto y varios de los css de los componentes de la página. Además cambio el texto del botón que cambia el modo.
-- tomas.js: integración con Hydra (script dinámico para importar hydra-synth desde CDN, initHydra() inicializa Hydra y genera visuales dinámicos en el canvas, setCanvasSize() adapta el tamaño del canvas al viewport y window.addEventListener('resize') ajusta resolución de Hydra al cambiar tamaño de ventana). control de dropdowns al hacer click en .dropdown-column alterna clases activas
+- tomas.js: integración con Hydra (script dinámico para importar hydra-synth desde CDN, initHydra() inicializa Hydra y genera visuales dinámicos en el canvas, setCanvasSize() adapta el tamaño del canvas al viewport y window.addEventListener('resize') ajusta resolución de Hydra al cambiar tamaño de ventana). control de dropdowns al hacer click en .dropdown-column alterna clases activas.
+-alvaro.js: dropdowns con efecto acordeón y visual retro con Hydra. 
+
+## 🚀 Instalación y uso
+1. Clonar este repositorio:
+   ```bash
+   git clone https://github.com/usuario/proyecto-grupo12.git
+2. Abrir el archivo index.html en el navegador.
+3. (Opcional) Si usás Live Server en VSCode, podés ejecutar el proyecto con recarga automática.
 
 ## Enlace del sitio
 PONER LINK SITIO
