@@ -6,13 +6,13 @@
   --bg-dark: #0b2545;   /* Azul profundo */
   --bg-panel: rgba(255, 255, 255, 0.05);
   --text-light: #2196f3;
-  --accent-green: #4caf50; /* Verde ADN */
-  --accent-blue: #063f6d;  /* Azul datos */
+  --accent-green: #02c9df; /* Verde ADN */
+  --accent-blue: #2196f3;  /* Azul datos */
   --accent-yellow: #ffc107; /* Amarillo resaltado */
   --accent-cyan: #00e5ff;  /* Cian ciencia */
 }
 
-/* --- Avatar --- */
+/* --- Avatar interactivo --- */
 .avatar-right {
   width: 140px;
   height: 140px;
@@ -25,7 +25,7 @@
 }
 
 .avatar-right:hover {
-  transform: scale(1.05);
+  transform: scale(1.1) rotate(-2deg);
   box-shadow: 6px 6px 0 var(--accent-cyan);
 }
 
@@ -37,6 +37,30 @@ body {
   background-color: var(--bg-dark);
   color: var(--text-light);
   line-height: 1.6;
+  min-height: 100vh; /* Asegura que crezca con el contenido */
+  overflow-y: auto;  /* Scroll automático si el contenido se desborda */
+}
+
+/* --- Botón Volver a la Portada --- */
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--accent-cyan); /* 👈 nuevo color */
+  color: var(--bg-dark); /* texto oscuro para contraste */
+  border: 2px solid var(--accent-cyan);
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 3px 3px 0 var(--accent-blue);
+  transition: all 0.3s ease;
+}
+
+.back-button:hover,
+.back-button:focus {
+  background: var(--accent-green);
+  color: var(--bg-dark);
+  box-shadow: 4px 4px 0 var(--accent-cyan);
+  transform: translateY(-2px);
 }
 
 /* --- Patrón de ADN como background decorativo --- */
@@ -63,13 +87,45 @@ body::before {
   padding: 0 15px;
 }
 
-/* --- Navbar --- */
-.navbar {
-  display: flex;
-  justify-content: flex-start;
-  padding: 12px 0;
+/* --- Navbar y Hero con fondo oscuro retro --- */
+.navbar,
+.hero {
+  background: rgba(255, 255, 255, 0.05); /* translúcido */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  box-shadow: 4px 4px 0 var(--accent-blue);
+  padding: 15px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
 }
 
+.hero:hover {
+  background: rgba(6, 63, 109, 0.2); /* efecto hover */
+  box-shadow: 6px 6px 0 var(--accent-green);
+}
+
+/* --- Animación de escritura para el nombre --- */
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid var(--accent-green);
+  white-space: nowrap;
+  width: 0;
+  display: inline-block;
+  animation: typing 3s steps(30, end) forwards,
+             blink .8s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: var(--accent-green) }
+}
+
+/* --- Navbar enlaces --- */
 .navbar .brand {
   color: var(--accent-green);
   text-decoration: none;
@@ -83,12 +139,7 @@ body::before {
   outline: none;
 }
 
-/* --- Hero --- */
-.hero {
-  text-align: left;
-  margin-bottom: 30px;
-}
-
+/* --- Hero textos --- */
 .hero h1 {
   font-size: 2rem;
   margin: 10px 0 5px;
@@ -171,13 +222,14 @@ ul li:hover {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: max-height 0.4s ease, opacity 0.3s ease;
+  transition: all 0.4s ease;
 }
 
 .dropdown-column.active .dropdown-content {
-  max-height: 800px;
+  max-height: 1000vh; /* 👈 crece sin límite */
   opacity: 1;
   padding-top: 10px;
+  overflow: visible; /* 👈 deja ver todo el contenido */
 }
 
 /* --- Footer --- */
