@@ -1,6 +1,5 @@
 // --- Importar Hydra desde CDN dinámicamente ---
 const script = document.createElement("script");
-
 script.onload = () => initHydra();
 document.head.appendChild(script);
 
@@ -27,7 +26,7 @@ function initHydra() {
     pixelRatio: DPR,
   });
 
-  // --- Fondo con tonos azules y verdes (diferente al de Tomás) ---
+  // --- Fondo con tonos azules y verdes--
   speed = 0.08;
 
   osc(40, 0.02, 0.9)
@@ -43,25 +42,39 @@ function initHydra() {
   });
 }
 
-// --- Dropdowns mejorados ---
+// --- Dropdowns optimizados con efecto acordeón ---
 document.addEventListener("DOMContentLoaded", () => {
   const dropdowns = document.querySelectorAll(".dropdown-column");
 
   dropdowns.forEach((column) => {
     const title = column.querySelector(".dropdown-title");
 
-    // Accesible con clic
-    title.addEventListener("click", () => {
-      column.classList.toggle("active");
-    });
-
-    // Accesible con teclado
+    // Hacer foco accesible con teclado
     title.setAttribute("tabindex", "0");
+
+    // Evento click
+    title.addEventListener("click", () => toggleDropdown(column));
+
+    // Evento teclado (Enter o Espacio)
     title.addEventListener("keydown", (e) => {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
-        column.classList.toggle("active");
+        toggleDropdown(column);
       }
     });
   });
+
+  function toggleDropdown(activeColumn) {
+    // Si ya está abierto → cerrarlo
+    if (activeColumn.classList.contains("active")) {
+      activeColumn.classList.remove("active");
+      return;
+    }
+
+    // Cerrar todos los demás
+    dropdowns.forEach((col) => col.classList.remove("active"));
+
+    // Abrir el seleccionado
+    activeColumn.classList.add("active");
+  }
 });
