@@ -34,7 +34,7 @@ La idea fue trabajar en equipo, compartir estilos y experimentar con diferentes 
 - index.html: filterTeam() filtrar por integrante
 - index.html: hay un alert en el footer
 - index.html: toggleMenu() para menú hamburguesa en dispositivos < 400px
-- bitacora.html: addBitacoraEntry()  agrega a la lista, pero no se guarda
+- bitacora.html: addBitacoraEntry()  agrega a la lista
 - tarjetas individuales: toggleSkills() muestra u oculta datos
 - ana.html: al ingresar a la página, el nombre y la ubicación van apareciendo letra por letra
 - jessica.html: despues de la presentacion, al hacer click en un boton te muestra frases motivacionales que van cambiando y se agregó animación al avatar.
