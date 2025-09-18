@@ -4,3 +4,32 @@
       font-weight: 600;
       padding: 0.3rem
     }
+
+#bitacora-list li {
+  background: var(--bg-panel, rgba(255, 255, 255, 0.08));
+  margin: 8px 0;
+  padding: 10px;
+  border-left: 4px solid var(--accent-blue, #2196f3);
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#bitacora-list li:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(4px);
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: var(--accent-yellow, #ffc107);
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: transform 0.2s ease;
+}
+
+.delete-btn:hover {
+  transform: scale(1.2);
+  color: var(--accent-cyan, #00e5ff);
+}
