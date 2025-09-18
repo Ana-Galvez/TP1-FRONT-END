@@ -43,7 +43,77 @@ function addBitacoraEntry(){
   input.value='';
 }
 
+
 //Función para mostrar el alert del footer
 document.querySelector("footer").addEventListener("click", () => {
   alert("🎮 ¡Modo secreto activado! Gracias por visitar nuestra web. 😁");
+});
+
+function addBitacoraEntry() {
+  const input = document.getElementById('bitacora-input');
+  const list = document.getElementById('bitacora-list');
+  if (!input.value.trim()) return;
+
+  const li = document.createElement('li');
+  li.textContent = input.value.trim();
+  li.classList.add('new-entry'); // 👈 clase animada
+  list.appendChild(li);
+
+  // quita la animación después de 1s
+  setTimeout(() => li.classList.remove('new-entry'), 1000);
+
+  input.value = '';
+}
+
+function addBitacoraEntry() {
+  const input = document.getElementById('bitacora-input');
+  const list = document.getElementById('bitacora-list');
+  if (!input.value.trim()) return;
+
+  const li = document.createElement('li');
+  li.textContent = input.value.trim();
+
+  // Botón de eliminar
+  const delBtn = document.createElement('button');
+  delBtn.textContent = "❌";
+  delBtn.classList.add("delete-btn");
+  delBtn.onclick = () => {
+    li.remove();
+    // actualizar LocalStorage
+    const saved = JSON.parse(localStorage.getItem('bitacoraEntries')) || [];
+    const updated = saved.filter(e => e !== li.textContent);
+    localStorage.setItem('bitacoraEntries', JSON.stringify(updated));
+  };
+
+  li.appendChild(delBtn);
+  list.appendChild(li);
+
+  // Guardar en LocalStorage
+  const saved = JSON.parse(localStorage.getItem('bitacoraEntries')) || [];
+  saved.push(input.value.trim());
+  localStorage.setItem('bitacoraEntries', JSON.stringify(saved));
+
+  input.value = '';
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  const list = document.getElementById('bitacora-list');
+  const saved = JSON.parse(localStorage.getItem('bitacoraEntries')) || [];
+  
+  saved.forEach(entry => {
+    const li = document.createElement('li');
+    li.textContent = entry;
+
+    const delBtn = document.createElement('button');
+    delBtn.textContent = "❌";
+    delBtn.classList.add("delete-btn");
+    delBtn.onclick = () => {
+      li.remove();
+      const updated = saved.filter(e => e !== entry);
+      localStorage.setItem('bitacoraEntries', JSON.stringify(updated));
+    };
+
+    li.appendChild(delBtn);
+    list.appendChild(li);
+  });
 });
